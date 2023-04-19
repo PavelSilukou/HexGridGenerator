@@ -302,18 +302,15 @@ namespace HexGridGenerator
         {
             var results = new List<Vector3Int>();
             var direction = GetNeighborsPositions(start)[4];
-            for (var i = 1; i <= radius; i++)
-            {
-                var scale = direction * i;
-                var hexPosition = start + scale;
+            var scale = direction * radius;
+            var hexPosition = start + scale;
 
-                for (var j = 0; j < 6; j++)
+            for (var j = 0; j < 6; j++)
+            {
+                for (var r = 0; r < radius; r++)
                 {
-                    for (var r = 0; r < i; r++)
-                    {
-                        results.Add(hexPosition);
-                        hexPosition = GetNeighborsPositions(hexPosition)[j];
-                    }
+                    results.Add(hexPosition);
+                    hexPosition = GetNeighborsPositions(hexPosition)[j];
                 }
             }
 
