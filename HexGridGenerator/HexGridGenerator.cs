@@ -126,7 +126,7 @@ namespace HexGridGenerator
                     _ => throw new ArgumentException("Stranger Things")
                 };
 
-                var obj = Instantiate(_source, selectedHex.transform) as MonoBehaviour;
+                var obj = PrefabUtility.InstantiatePrefab(_source, selectedHex.transform) as MonoBehaviour;
                 if (obj != null) obj.transform.localPosition = targetPosition;
             }
         }
