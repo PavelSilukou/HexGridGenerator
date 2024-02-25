@@ -73,7 +73,7 @@ namespace HexGridGenerator
             
             GUILayout.BeginHorizontal();
             GUILayout.Label("Grid Object", GUILayout.Width(100));
-            _source = EditorGUILayout.ObjectField(_source, typeof(MonoBehaviour), false);
+            _source = EditorGUILayout.ObjectField(_source, typeof(GameObject), false);
             GUILayout.EndHorizontal();
 
             var radiusType = _selectedRadiusType == 0 ? HexRadius.Outer : HexRadius.Inner;
@@ -126,7 +126,7 @@ namespace HexGridGenerator
                     _ => throw new ArgumentException("Stranger Things")
                 };
 
-                var obj = PrefabUtility.InstantiatePrefab(_source, selectedHex.transform) as MonoBehaviour;
+                var obj = PrefabUtility.InstantiatePrefab(_source, selectedHex.transform) as GameObject;
                 if (obj != null) obj.transform.localPosition = targetPosition;
             }
         }

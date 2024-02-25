@@ -7,10 +7,10 @@
 
     <ItemGroup>
       <Reference Include="UnityEditor">
-        <HintPath>..\..\..\..\..\Program Files\Unity\Hub\Editor\2020.3.41f1\Editor\Data\Managed\UnityEditor.dll</HintPath>
+        <HintPath>libs\UnityEditor.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine">
-        <HintPath>..\..\..\..\..\Program Files\Unity\Hub\Editor\2020.3.41f1\Editor\Data\Managed\UnityEngine.dll</HintPath>
+        <HintPath>libs\UnityEngine.dll</HintPath>
       </Reference>
     </ItemGroup>
 
